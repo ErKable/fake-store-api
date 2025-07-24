@@ -3,7 +3,7 @@
     @for(item of cartItems$ | async; track $index){
         <mat-grid-tile>
             <div class="cart-card">
-                {{item.title}}
+                <b>{{item.title.substring(0, 75)+"..."}}</b>
                 <div>
                     <img [src]="item.image" height="100px"/>
                     <p>{{item.description.substring(0, 250)+'...'}}</p>

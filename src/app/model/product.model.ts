@@ -8,5 +8,6 @@ export interface IProduct {
     title: string,
     description: string,
     category: string,
-    image: string
+    image: string,
+    price: number
 }
