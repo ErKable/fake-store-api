@@ -1,10 +1,11 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { IProduct } from '../../model/product.model';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-product-details',
-  imports: [],
+  imports: [MatProgressBarModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })

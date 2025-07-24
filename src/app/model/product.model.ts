@@ -9,5 +9,6 @@ export interface IProduct {
     description: string,
     category: string,
     image: string,
-    price: number
+    price: number,
+    rating: IRating
 }
