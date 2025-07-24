@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { AppState } from "../app.state";
-import { addToCart, loadProducts, loadProductsFailure, loadProductsSuccess } from "./product.actions";
+import { addToCart, loadProducts, loadProductsFailure, loadProductsSuccess, removeFromCart } from "./product.actions";
 
 export const initialState: AppState = {
     products: [],
@@ -28,5 +28,9 @@ export const productsReducer = createReducer(
     on(addToCart, (state, {product}) => ({
         ...state,
         cart: [...state.cart, product]
+    })),
+    on(removeFromCart, (state, {indexToRemove}) => ({
+        ...state,
+        cart: state.cart.filter((_, index) => index !== indexToRemove)
     }))
 )

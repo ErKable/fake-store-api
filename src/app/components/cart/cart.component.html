@@ -1,0 +1,15 @@
+
+<mat-grid-list cols="1" rowHeight="250px">
+    @for(item of cartItems$ | async; track $index){
+        <mat-grid-tile>
+            <div class="cart-card">
+                {{item.title}}
+                <div>
+                    <img [src]="item.image" height="100px"/>
+                    <p>{{item.description.substring(0, 250)+'...'}}</p>
+                </div>
+                <button mat-raised-button (click)="removeItem($index)">Remove from cart</button>
+            </div>
+        </mat-grid-tile>
+    }
+</mat-grid-list>
