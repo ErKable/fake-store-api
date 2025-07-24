@@ -1,0 +1,23 @@
+.navbar{
+    height: 150px;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-icon {
+    background-color: aliceblue;
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+}
+
+.example-full-width{
+    width: 100%;
+}
+
+.formContainer{
+    width: 80%;
+}
